@@ -1,2 +1,2 @@
 # Imagetovideoconverter
-This code is used to convert your images into video.
+This code is used to convert your images into video depening on number of frame per second that you determine. Opencv, numpy, and glob libraries were used. First of all, you determine your frame per second number as fps after that null array was created after that you copy information of your images into this array by using for loop.Depending of your image extension you can change for loop. And then  by using cv2.VideoWriter and .write function you can cretae your video.
