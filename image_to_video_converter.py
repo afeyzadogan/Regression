@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
+
+
+import cv2
+import numpy as np
+import glob
+
+fps=
+
+img_array = []
+for filename in glob.glob('/home/afeyzadogan/Desktop/convertvideo/*.jpg'):
+    img = cv2.imread(filename)
+    height, width, layers = img.shape
+    size = (width,height)
+    img_array.append(img)
+ 
+ 
+out = cv2.VideoWriter('celltrack.avi',cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+ 
+for i in range(len(img_array)):
+    out.write(img_array[i])
+out.release()
+
+
+# In[ ]:
+
+
+
+
